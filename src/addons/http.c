@@ -36,6 +36,10 @@
 
 #include "../private_api.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wsign-conversion"
+#pragma clang diagnostic ignored "-Wsign-compare"
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifdef FLECS_HTTP
 
 #if defined(ECS_TARGET_WINDOWS)
@@ -303,6 +307,7 @@ void http_sock_keep_alive(
 
 static
 void http_sock_nonblock(ecs_http_socket_t sock, bool enable) {
+	(void)enable;
     (void)sock;
     (void)enable;
 #ifdef ECS_TARGET_POSIX
@@ -1646,3 +1651,5 @@ void* ecs_http_server_ctx(
 }
 
 #endif
+
+#pragma clang diagnostic pop

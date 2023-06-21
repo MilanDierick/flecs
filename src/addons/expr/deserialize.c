@@ -6,6 +6,8 @@
 #include "../../private_api.h"
 #include <ctype.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifdef FLECS_EXPR
 
 /* String deserializer for values & simple expressions */
@@ -1359,3 +1361,5 @@ const char* ecs_parse_expr(
 }
 
 #endif
+
+#pragma clang diagnostic pop

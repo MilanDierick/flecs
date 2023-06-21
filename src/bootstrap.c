@@ -18,6 +18,8 @@
 
 #include "private_api.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 /* -- Identifier Component -- */
 static ECS_DTOR(EcsIdentifier, ptr, {
     ecs_os_strset(&ptr->value, NULL);
@@ -938,3 +940,5 @@ void flecs_bootstrap(
 
     ecs_log_pop();
 }
+
+#pragma clang diagnostic pop

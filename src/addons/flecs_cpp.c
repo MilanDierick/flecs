@@ -8,6 +8,8 @@
 
 /* Utilities for C++ API */
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifdef FLECS_CPP
 
 /* Convert compiler-specific typenames extracted from __PRETTY_FUNCTION__ to
@@ -514,3 +516,5 @@ const ecs_member_t* ecs_cpp_last_member(
 #endif
 
 #endif
+
+#pragma clang diagnostic pop

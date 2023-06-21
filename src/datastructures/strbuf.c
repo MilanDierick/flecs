@@ -26,6 +26,8 @@
  *  Copyright (c) 2011-2020 Anton B. Gusev aka AHTOXA
  */
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #define MAX_PRECISION	(10)
 #define EXP_THRESHOLD   (3)
 #define INT64_MAX_F ((double)INT64_MAX)
@@ -822,3 +824,5 @@ int32_t ecs_strbuf_written(
         return 0;
     }
 }
+
+#pragma clang diagnostic pop

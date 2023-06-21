@@ -5,6 +5,8 @@
 
 #include "../private_api.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifdef FLECS_META_C
 
 #include <ctype.h>
@@ -821,3 +823,5 @@ error:
 }
 
 #endif
+
+#pragma clang diagnostic pop

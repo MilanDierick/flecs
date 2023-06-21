@@ -7,6 +7,8 @@
 #include <time.h>
 #include <ctype.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifndef FLECS_NDEBUG
 static int64_t flecs_s_min[] = { 
     [1] = INT8_MIN, [2] = INT16_MIN, [4] = INT32_MIN, [8] = INT64_MIN };
@@ -206,3 +208,5 @@ char* flecs_to_snake_case(const char *str) {
 
     return out;
 }
+
+#pragma clang diagnostic pop

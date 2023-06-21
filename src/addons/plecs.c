@@ -5,6 +5,8 @@
 
 #include "flecs.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifdef FLECS_PLECS
 
 ECS_COMPONENT_DECLARE(EcsScript);
@@ -2214,3 +2216,5 @@ void FlecsScriptImport(
 }
 
 #endif
+
+#pragma clang diagnostic pop

@@ -3,6 +3,9 @@
  * @brief Builtin Windows implementation for OS API.
  */
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wimplicit-int-float-conversion"
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif
@@ -274,3 +277,5 @@ void ecs_set_os_api_impl(void) {
 
     ecs_os_set_api(&api);
 }
+
+#pragma clang diagnostic pop

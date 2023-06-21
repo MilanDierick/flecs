@@ -11,6 +11,8 @@
 #include <ctype.h>
 #include <time.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 void ecs_os_api_impl(ecs_os_api_t *api);
 
 static bool ecs_os_api_initialized = false;
@@ -538,3 +540,5 @@ const char* ecs_os_strerror(int err) {
     return strerror(err);
 #   endif
 }
+
+#pragma clang diagnostic pop

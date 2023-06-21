@@ -5,6 +5,8 @@
 
 #include "flecs.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #ifdef FLECS_MODULE
 
 #include "../private_api.h"
@@ -233,3 +235,5 @@ error:
 }
 
 #endif
+
+#pragma clang diagnostic pop
